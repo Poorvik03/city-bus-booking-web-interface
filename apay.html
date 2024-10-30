@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="apay.css">
+</head>
+<body>
+   <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68OG66TKrHBS9NiciRAvMWO46Uhk96wXQCg&s.png">
+        <h1>Payment Successful</h1>
+    </header>
+    <div class="success-container">
+        <img src="https://th.bing.com/th/id/OIP.oUEzkTPkAKq3HNCesBlZlAHaHa?rs=1&pid=ImgDetMain.png" alt="Success" class="success-icon">
+        <h2>Thank you for your payment!</h2>
+        <p>Your payment was successful.Your ticket is confirmed.</p>
+        <button onclick="showTicketSummary()">Ticket Summary</button>
+        <button><a href="file:///C:/Users/CSP/Desktop/user/route-sel.html">HOME</button>
+    </div>
+
+    <div class="ticket-summary" id="ticket-summary">
+        <h2>Ticket Summary</h2>
+        <p><strong>From:</strong>majestic</p>
+        <p><strong>To:</strong>Whitefield</p>
+        <p><strong>Journey Date:</strong> 30th October 2024</p>
+        <p><strong>Number of Passengers:</strong> 4</p>
+        <p><strong>Total Cost:</strong> ₹118</p>
+        <button onclick="window.print()">Print Ticket</button>
+    </div>
+
+    <script>
+        function showTicketSummary() {
+            const ticketSummary = document.getElementById('ticket-summary');
+            ticketSummary.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+ <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68OG66TKrHBS9NiciRAvMWO46Uhk96wXQCg&s.png" alt="Logo" class="logo">
+        <h1>WELCOME TO BMTC!!</h1>
+    </header>
+    <div class="container">
+        <div class="header">
+            <h2>Log in for a seamless experience</h2>
+            <ul>
+                <li>✅ Enjoy fastest ticket booking</li>
+                <li>✅ Track your bus</li>
+                <li>✅ Get instant reservations for long commutes</li>
+            </ul>
+        </div>
+        <div class="login-box">
+            <div class="country-code">
+                <span>🇮🇳 +91</span>
+                <input type="text" placeholder="Enter mobile No." id="mobile-number">
+            </div>
+            <button class="login-button" onclick="login()"><a href="file:///C:/Users/CSP/Desktop/user/route-sel.html">Continue</button>
+            <p>OR</p>
+            <button class="social-button facebook"><a href="https://www.facebook.com/">Facebook</button>
+            <button class="social-button google"><a href="https://accounts.google.com/AddSession/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=en&authuser=0&ddm=0&flowName=GlifWebSignIn&flowEntry=AddSession">Google</button>
+            <p><a href="#" onclick="loginWithEmail()"><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-633919710%3A1730224926545198&ddm=0">Log in using email instead</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

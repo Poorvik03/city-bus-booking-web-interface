@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68OG66TKrHBS9NiciRAvMWO46Uhk96wXQCg&s.png" alt="Logo" class="logo">
+        <h1>Seat Selection</h1>
+        <div id="route-display"></div>
+    </header>
+    <div class="seat-container">
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">1A</div>
+            <div class="seat" onclick="toggleSeat(this)">1B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">1C</div>
+            <div class="seat" onclick="toggleSeat(this)">1D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">2A</div>
+            <div class="seat" onclick="toggleSeat(this)">2B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">2C</div>
+            <div class="seat" onclick="toggleSeat(this)">2D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">3A</div>
+            <div class="seat" onclick="toggleSeat(this)">3B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">3C</div>
+            <div class="seat" onclick="toggleSeat(this)">3D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">4A</div>
+            <div class="seat" onclick="toggleSeat(this)">4B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">4C</div>
+            <div class="seat" onclick="toggleSeat(this)">4D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">5A</div>
+            <div class="seat" onclick="toggleSeat(this)">5B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">5C</div>
+            <div class="seat" onclick="toggleSeat(this)">5D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">6A</div>
+            <div class="seat" onclick="toggleSeat(this)">6B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">6C</div>
+            <div class="seat" onclick="toggleSeat(this)">6D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">7A</div>
+            <div class="seat" onclick="toggleSeat(this)">7B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">7C</div>
+            <div class="seat" onclick="toggleSeat(this)">7D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">8A</div>
+            <div class="seat" onclick="toggleSeat(this)">8B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">8C</div>
+            <div class="seat" onclick="toggleSeat(this)">8D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">9A</div>
+            <div class="seat" onclick="toggleSeat(this)">9B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">9C</div>
+            <div class="seat" onclick="toggleSeat(this)">9D</div>
+        </div>
+        <div class="seat-row">
+            <div class="seat" onclick="toggleSeat(this)">10A</div>
+            <div class="seat" onclick="toggleSeat(this)">10B</div>
+            <div class="seat-space"></div>
+            <div class="seat" onclick="toggleSeat(this)">10C</div>
+            <div class="seat" onclick="toggleSeat(this)">10D</div>
+        </div>
+    </div>
+    <button onclick="confirmSelection()"><a href="file:///C:/Users/CSP/Desktop/user/payment.html">Confirm Selection</button>
+    
+    <script>
+        function toggleSeat(seat) {
+            seat.classList.toggle("selected");
+        }
+
+        function confirmSelection() {
+            const selectedSeats = document.querySelectorAll(".seat.selected");
+            const seatNumbers = Array.from(selectedSeats).map(seat => seat.textContent);
+            if (seatNumbers.length > 0) {
+                alert(`Seats selected: ${seatNumbers.join(", ")}`);
+            } else {
+                alert("Please select at least one seat.");
+            }
+        }
+
+        function displayRoute() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromStation = urlParams.get("from");
+            const toStation = urlParams.get("to");
+            document.getElementById("route-display").textContent = `Route: ${fromStation} to ${toStation}`;
+        }
+        
+        window.onload = displayRoute;
+    </script>
+</body>
+</html>

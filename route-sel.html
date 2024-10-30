@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68OG66TKrHBS9NiciRAvMWO46Uhk96wXQCg&s.png" alt="Logo" class="logo">
+        <h1>Select Your Route</h1>
+    </header>
+    <div class="route-container">
+        <div class="route-input">
+            <label for="from-station">From Station</label>
+            <input type="text" id="from-station" placeholder="Enter current station">
+        </div>
+        <div class="route-input">
+            <label for="to-station">To Station</label>
+            <input type="text" id="to-station" placeholder="Enter destination">
+        </div>
+        <button onclick="selectRoute()"><a href="file:///C:/Users/CSP/Desktop/user/routes.html">Select Route</button>
+    </div>
+
+    <script>
+        function selectRoute() {
+            const fromStation = document.getElementById('from-station').value;
+            const toStation = document.getElementById('to-station').value;
+            if (fromStation && toStation) {
+                alert(`Route selected: ${fromStation} to ${toStation}`);
+                window.location.href = `seat-sel.html?from=${fromStation}&to=${toStation}`;
+            } else {
+                alert("Please enter both 'From' and 'To' stations.");
+            }
+        }
+    </script>
+</body>
+</html>
